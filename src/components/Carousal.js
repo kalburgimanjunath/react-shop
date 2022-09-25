@@ -67,7 +67,7 @@ export default function Carousal({ category }) {
         {footer.map((item) => {
           return (
             <div key={item.id} style={container.footer_item}>
-              {item}
+              <a href={`category/${item}`}>{item}</a>
             </div>
           );
         })}
