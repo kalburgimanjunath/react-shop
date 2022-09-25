@@ -1,13 +1,15 @@
 import React from 'react';
 import './style.css';
-import Header from './components/Header';
-import Carousal from './components/Carousal';
+
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 export default function App() {
   const category = ['zara original', 'men', 'women', 'kids'];
   return (
     <div>
-      <Header />
-      <Carousal category={category} />
+      <Routes>
+        <Route path="/*" element={<Home category={category} />} exact />
+      </Routes>
     </div>
   );
 }

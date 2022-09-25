@@ -65,7 +65,11 @@ export default function Carousal({ category }) {
     return (
       <div style={container.footer}>
         {footer.map((item) => {
-          return <div style={container.footer_item}>{item}</div>;
+          return (
+            <div key={item.id} style={container.footer_item}>
+              {item}
+            </div>
+          );
         })}
       </div>
     );

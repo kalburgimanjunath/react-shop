@@ -1,4 +1,12 @@
 import React from 'react';
-export default function Home() {
-  return <div>Home</div>;
+import Header from '../components/Header';
+import Carousal from '../components/Carousal';
+export default function Home({ category }) {
+  return (
+    <div>
+      Hello world
+      <Header />
+      <Carousal category={category} />
+    </div>
+  );
 }
